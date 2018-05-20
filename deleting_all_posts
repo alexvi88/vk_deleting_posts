@@ -3,10 +3,7 @@ import settings
 import time
 
 
-session = vk.AuthSession(scope='wall',
-                         app_id=settings.app_id,
-                         user_login=settings.user_login,
-                         user_password=settings.user_password)
+session = vk.Session(access_token=settings.user_access_token)
 
 vk_api = vk.API(session, v=settings.vk_api_version)
 
